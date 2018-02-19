@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import Food from './Food';
 import Snake from './Snake';
 
-class Main extends Phaser.Scene {
+class MainScene extends Phaser.Scene {
   create() {
     this.food = new Food(this, 3, 4);
     this.snake = new Snake(this, 8, 8);
@@ -100,4 +100,4 @@ class Main extends Phaser.Scene {
   }
 }
 
-export default Main;
+export default MainScene;

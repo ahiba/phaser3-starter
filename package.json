@@ -6,7 +6,7 @@
     "phaser": "^3.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "^2.0.0-next.47d2d941"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -17,5 +17,18 @@
   "devDependencies": {
     "raw-loader": "^0.5.1",
     "react-app-rewired": "^1.4.1"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "last 4 versions",
+      "Firefox ESR",
+      "not ie < 11"
+    ]
   }
 }

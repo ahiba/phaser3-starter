@@ -1,18 +1,23 @@
+import MainScene from './MainScene';
 import Phaser from 'phaser';
-import Main from './Main';
 
-export function setup(parentId) {
+let game;
+
+export function setup(divId) {
   var config = {
     type: Phaser.WEBGL,
     width: 640,
     height: 480,
     backgroundColor: '#bfcc00',
-    parent: parentId,
-    scene: Main
+    parent: divId,
+    scene: MainScene
   };
 
   // instantiates the game
-  new Phaser.Game(config);
+  game = new Phaser.Game(config);
 }
 
-export function teardown() {}
+export function teardown() {
+  game.destroy();
+  game = null;
+}
