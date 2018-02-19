@@ -1,0 +1,31 @@
+{
+  // yarn add babel-eslint eslint-plugin-react --dev
+  "env": {
+    // I write for browser
+    "browser": true,
+    // in CommonJS
+    "node": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "plugins": ["react"],
+  "rules": {
+    "max-len": [
+      1,
+      80,
+      2,
+      {
+        "ignoreComments": true
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "react/prop-types": [2]
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"]
+}

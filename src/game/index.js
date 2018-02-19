@@ -1,22 +1,13 @@
 import * as React from 'react';
-import Example from './Example';
-import Phaser from 'phaser';
-
-function createGame() {
-  const config = {
-    type: Phaser.AUTO,
-    parent: 'phaser-game',
-    width: 800,
-    height: 600,
-    scene: [Example]
-  };
-
-  new Phaser.Game(config);
-}
+import {setup, teardown} from './Snake';
 
 export class Game extends React.PureComponent {
   componentDidMount() {
-    createGame();
+    setup('phaser-game');
+  }
+
+  componentWillUnmount() {
+    teardown();
   }
 
   render() {

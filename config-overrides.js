@@ -5,6 +5,7 @@
  * This runs from node so don't use fancy smancy ES6 here.
  */
 const webpack = require('webpack');
+const fp = require('path');
 
 function override(config, env) {
   config.module.rules.push({
@@ -18,6 +19,9 @@ function override(config, env) {
       WEBGL_RENDERER: false
     })
   );
+
+  // import pseudo-absolute paths relative to src
+  config.resolve.alias['#'] = fp.join(__dirname, 'src');
 
   return config;
 }
